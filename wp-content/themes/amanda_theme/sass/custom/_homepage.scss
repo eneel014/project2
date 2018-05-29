@@ -1,0 +1,16 @@
+.page-template-homepage-template {
+  #page {
+    height: 100vh;
+    position: relative;
+
+    header,
+    footer {
+      position: absolute;
+    }
+    footer {
+      bottom: 0;
+    }
+
+    
+  }
+}

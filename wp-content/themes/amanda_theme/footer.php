@@ -24,6 +24,7 @@
 <?php wp_footer(); ?>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="//cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+<script src="//unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
 <script src="<?=get_template_directory_uri()?>/js/script.js"></script>
 </body>
 </html>

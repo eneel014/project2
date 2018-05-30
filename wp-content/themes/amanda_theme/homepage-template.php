@@ -5,10 +5,35 @@
 
 get_header(); ?>
 <div id="hpSliderContainer">
-  <div class="item1" style="background-color: red;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, dignissimos deleniti facere praesentium expedita aut voluptate quibusdam maiores, aliquam nemo blanditiis vero fuga rerum impedit consequuntur sequi totam, iure fugit.</div>
-  <div class="item2" style="background-color: salmon;">Expedita reiciendis esse adipisci perspiciatis corrupti id placeat totam eveniet vero. Exercitationem fugiat perferendis possimus expedita? Quidem incidunt reiciendis numquam! Dolorum, laboriosam! Magni perspiciatis adipisci quod vitae deleniti repellat iure.</div>
-  <div class="item3" style="background-color: pink;">Possimus quod hic enim, perferendis voluptate quos praesentium, voluptates atque odio, sapiente quis! Nisi, quisquam consectetur? Repellat officia voluptatibus commodi, sapiente facilis delectus aliquid fugiat deleniti, doloremque saepe molestias nihil.</div>
-  <div class="item4" style="background-color: teal;">Nesciunt, harum atque, laboriosam quod error cumque possimus cum ratione porro dolorum laborum facilis ad temporibus, pariatur quibusdam iusto? Amet quaerat asperiores, velit reprehenderit excepturi possimus inventore ea suscipit enim?</div>
+  <div class="item1">
+    <img src="<?=get_template_directory_uri()?>/inc/img/img1.jpeg" class="sliderReveal-left" alt="">
+    <div class="slider-inner max-wrap">
+      <div class="slider-item-text">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum dolores quis nam possimus assumenda. Necessitatibus fuga debitis tempore repellendus illum deleniti assumenda possimus rerum, consectetur quas! Magni ullam quod incidunt.
+      </div>
+    </div>    
+  </div>
+  <div class="item2"><img src="<?=get_template_directory_uri()?>/inc/img/img2.jpeg" class="sliderReveal-left" alt="">
+    <div class="slider-inner max-wrap">
+      <div class="slider-item-text"> 
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum dolores quis nam possimus assumenda. Necessitatibus fuga debitis tempore repellendus illum deleniti assumenda possimus rerum, consectetur quas! Magni ullam quod incidunt.
+      </div>
+    </div>    
+  </div>
+  <div class="item3"><img src="<?=get_template_directory_uri()?>/inc/img/img3.jpeg" class="sliderReveal-left" alt="">
+    <div class="slider-inner max-wrap">
+      <div class="slider-item-text"> 
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum dolores quis nam possimus assumenda. Necessitatibus fuga debitis tempore repellendus illum deleniti assumenda possimus rerum, consectetur quas! Magni ullam quod incidunt.
+      </div>
+    </div>    
+  </div>
+  <div class="item4"><img src="<?=get_template_directory_uri()?>/inc/img/img4.jpeg" class="sliderReveal-left" alt="">
+    <div class="slider-inner max-wrap">
+      <div class="slider-item-text"> 
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum dolores quis nam possimus assumenda. Necessitatibus fuga debitis tempore repellendus illum deleniti assumenda possimus rerum, consectetur quas! Magni ullam quod incidunt.
+      </div>
+    </div>    
+  </div>
 </div>
 <?php get_footer(); ?>
   

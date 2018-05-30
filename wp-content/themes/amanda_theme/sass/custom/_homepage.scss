@@ -2,6 +2,7 @@
   #page {
     height: 100vh;
     position: relative;
+    min-height: 548px;
 
     header,
     footer {
@@ -11,6 +12,37 @@
       bottom: 0;
     }
 
-    
+    #content {
+      #hpSliderContainer {
+        & > div {
+          overflow: hidden;
+          min-height: 500px;
+
+          .slider-inner {
+            position: relative;
+
+            .slider-item-text {
+              position: absolute;
+              max-width: 510px;
+              width: 98%;
+            }
+          }
+
+          img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            height: auto;
+            @include transform(translate(-50%, -50%));
+            min-width: 100%;
+            object-fit: cover;
+            max-width: none;
+            z-index: -36;
+            height: 100%;
+            width: auto;
+          }
+        }
+      }
+    }
   }
 }

@@ -8,6 +8,11 @@
     footer {
       position: absolute;
     }
+
+    header {
+      z-index: 1;
+      width: 100%;
+    }
     footer {
       bottom: 0;
     }
@@ -20,11 +25,14 @@
 
           .slider-inner {
             position: relative;
+            height: 100%;
 
             .slider-item-text {
               position: absolute;
               max-width: 510px;
               width: 98%;
+              @include transform(translateY(-50%));
+              top: 50%;
             }
           }
 

@@ -5,35 +5,27 @@
 
 get_header(); ?>
 <div id="hpSliderContainer">
-  <div class="item1">
-    <img src="<?=get_template_directory_uri()?>/inc/img/img1.jpeg" class="sliderReveal-left" alt="">
-    <div class="slider-inner max-wrap">
-      <div class="slider-item-text">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum dolores quis nam possimus assumenda. Necessitatibus fuga debitis tempore repellendus illum deleniti assumenda possimus rerum, consectetur quas! Magni ullam quod incidunt.
-      </div>
-    </div>    
-  </div>
-  <div class="item2"><img src="<?=get_template_directory_uri()?>/inc/img/img2.jpeg" class="sliderReveal-left" alt="">
-    <div class="slider-inner max-wrap">
-      <div class="slider-item-text"> 
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum dolores quis nam possimus assumenda. Necessitatibus fuga debitis tempore repellendus illum deleniti assumenda possimus rerum, consectetur quas! Magni ullam quod incidunt.
-      </div>
-    </div>    
-  </div>
-  <div class="item3"><img src="<?=get_template_directory_uri()?>/inc/img/img3.jpeg" class="sliderReveal-left" alt="">
-    <div class="slider-inner max-wrap">
-      <div class="slider-item-text"> 
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum dolores quis nam possimus assumenda. Necessitatibus fuga debitis tempore repellendus illum deleniti assumenda possimus rerum, consectetur quas! Magni ullam quod incidunt.
-      </div>
-    </div>    
-  </div>
-  <div class="item4"><img src="<?=get_template_directory_uri()?>/inc/img/img4.jpeg" class="sliderReveal-left" alt="">
-    <div class="slider-inner max-wrap">
-      <div class="slider-item-text"> 
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum dolores quis nam possimus assumenda. Necessitatibus fuga debitis tempore repellendus illum deleniti assumenda possimus rerum, consectetur quas! Magni ullam quod incidunt.
-      </div>
-    </div>    
-  </div>
+  <?php 
+    if(have_rows('hp_featured_slider')):
+
+      while(have_rows('hp_featured_slider')) : the_row();
+        $hfs_img = get_sub_field('ftd_slider_image');
+        $hfs_text = get_sub_field('ftd_slider_text');
+        $hfs_txt_pos = get_sub_field('ftd_slider_text_position');
+        $hfs_txt_align = get_sub_field('slider_text_align');
+        ?>
+        <div class="item1 <?=$hfs_txt_pos?>-slider-align">
+          <img src="<?=$hfs_img?>" class="sliderReveal-left" alt="">
+          <div class="slider-inner max-wrap <?=$hfs_txt_align?>-txt-align">
+            <div class="slider-item-text">
+              <?=$hfs_text?>
+            </div>
+          </div>    
+        </div>
+        <?php
+      endwhile;
+
+    endif; ?>
 </div>
 <?php get_footer(); ?>
   

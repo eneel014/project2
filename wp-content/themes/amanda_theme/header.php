@@ -24,12 +24,26 @@
 </head>
 
 <body <?php body_class(); ?>>
+<div class="tri-preloader">
+	<div class='triangles'>
+		<div class='tri invert'></div>
+		<div class='tri invert'></div>
+		<div class='tri'></div>
+		<div class='tri invert'></div>
+		<div class='tri invert'></div>
+		<div class='tri'></div>
+		<div class='tri invert'></div>
+		<div class='tri'></div>
+		<div class='tri invert'></div>
+	</div>
+</div>
+
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'amanda_theme' ); ?></a>
 
 	<header id="masthead" class="site-header">
 		<div class="max-wrap">
-			<div class="site-branding">
+			<div class="site-branding reveal-top">
 				<?php
 				the_custom_logo();
 				if ( is_front_page() && is_home() ) :
@@ -48,7 +62,7 @@
 				<?php endif; ?>
 			</div><!-- .site-branding -->
 
-			<nav id="site-navigation" class="main-navigation">
+			<nav id="site-navigation" class="main-navigation reveal-top">
 				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'amanda_theme' ); ?></button>
 				<?php
 				wp_nav_menu( array(

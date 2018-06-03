@@ -1,15 +1,18 @@
 @font-face {
-  font-family: AvenirNextBold;
-  src: url(../../inc/fonts/AvenirNext-Bold.woff) format("woff"),
-    url(../../inc/fonts/AvenirNext-Bold.ttf) format("opentype");
+  font-family: AvenNxtBld;
+  src: url(../inc/fonts/AvenirNext-Bold.woff) format("woff"),
+    url(../inc/fonts/AvenirNext-Bold.ttf) format("opentype");
+  font-weight: bold;
 }
 @font-face {
-  font-family: AvenirNextBold;
-  src: url(../../inc/fonts/AvenirNext-Medium.woff) format("woff"),
-    url(../../inc/fonts/AvenirNext-Medium.ttf) format("opentype");
+  font-family: AvenNxtMed;
+  src: url(../inc/fonts/AvenirNext-Medium.woff) format("woff"),
+    url(../inc/fonts/AvenirNext-Medium.ttf) format("opentype");
+  font-weight: 500;
 }
 @font-face {
-  font-family: AvenirNextBold;
-  src: url(../../inc/fonts/AvenirNext-Regular.woff) format("woff"),
-    url(../../inc/fonts/AvenirNext-Regular.ttf) format("opentype");
+  font-family: AvenNxtRglr;
+  src: url(../inc/fonts/AvenirNext-Regular.woff) format("woff"),
+    url(../inc/fonts/AvenirNext-Regular.ttf) format("opentype");
+  font-weight: normal;
 }

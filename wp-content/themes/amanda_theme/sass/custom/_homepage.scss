@@ -18,36 +18,163 @@
     }
 
     #content {
-      #hpSliderContainer {
-        & > div {
-          overflow: hidden;
-          min-height: 500px;
+      .hp-bxslider {
+        position: relative;
 
-          .slider-inner {
-            position: relative;
-            height: 100%;
+        #hpSliderContainer {
+          & > div {
+            overflow: hidden;
+            min-height: 500px;
+  
+            .slider-inner {
+              position: relative;
+              height: 100%;
+  
+              &.left-txt-align {
+                text-align: left;
+              }
+              &.center-txt-align {
+                text-align: center;
+              }
+              &.right-txt-align {
+                text-align: right;
+              }
+  
+              .slider-item-text {
+                position: absolute;
+                max-width: 510px;
+                width: 98%;
+                @include transform(translateY(-15%));
+                @include transition(.3s all ease);
+                top: 50%;
+                left: auto;
+                font-family: $mainFontR;
+                letter-spacing: 2px;
+                opacity: 0;
+  
+                p {
+                  margin: 0;
+                  font-size: 50px;
+                  line-height: 50px;
+                }
+                h2 {
+                  margin: 40px 0 0;
+                }
+                blockquote {
+                  margin: 0;
+                  padding: 0 45px;
+                  position: relative;
+                  text-align: left;
+                  letter-spacing: 4px;
+  
+                  &:after,
+                  &:before {
+                    content: '\201C';
+                    font-family: Arial Black;
+                    color: #f6ac24;
+                    font-size: 145px;
+                    position:  absolute;
+                    line-height:  0;
+                  }
+                  &:before {
+                    left:  0;
+                    top: -20px;
+                  }
+                  &:after {
+                    bottom: 35px;
+                    right: 0;
+                    @include transform(rotate(180deg));
+                    @include transform-origin(0);
+                  }
+                }
+                .quoted-by {
+                  text-align: right;
+                  h2 {
+                    font-size: 35px;
+                    font-family: $mainFontM;
+                  }
+                  p {
+                    font-size: 23px;
+                  }
+                }
+              }
+            }
 
-            .slider-item-text {
+            &.active-slider {
+              .slider-inner {
+                .slider-item-text {
+                  opacity: 1;
+                  @include transform(translateY(-45%));
+                }
+              }
+            }
+  
+            img {
               position: absolute;
-              max-width: 510px;
-              width: 98%;
-              @include transform(translateY(-50%));
               top: 50%;
+              left: 50%;
+              height: auto;
+              @include transform(translate(-50%, -50%));
+              min-width: 100%;
+              object-fit: cover;
+              max-width: none;
+              z-index: -36;
+              height: 100%;
+              width: auto;
+            }
+            
+            &.active-slider.right-slider-align {
+              .slider-inner {
+                .slider-item-text {
+                  right: 0;
+                }
+              }
+            }
+            &.active-slider.center-slider-align {
+              .slider-inner {
+                .slider-item-text {
+                  left: 50%;
+                  @include transform(translate(-50%, -45%));
+                }
+              }
             }
           }
+        }
+  
+        .bx-controls {
+          position: absolute;
+          bottom: 35px;
+          width: 100%;
+          left: 0;
+          opacity: .75;
+  
+          .bx-controls-direction {
+            display: none;
+          }
+  
+          .bx-pager {
+            font-size: 0;
+            width: 100%;
+            text-align: center;
+            .bx-pager-item {
+              display: inline-block;
+  
+              a {
+                display: inline-block;
+                width: 20px; 
+                height: 20px;
+                background: $yellow;
+                margin: 0 8px;
+                border-radius: 100%;
+                outline: 0;
+                transition: .3s all ease;
 
-          img {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            height: auto;
-            @include transform(translate(-50%, -50%));
-            min-width: 100%;
-            object-fit: cover;
-            max-width: none;
-            z-index: -36;
-            height: 100%;
-            width: auto;
+                &.active,
+                &:hover {
+                  background: #292929;
+                }
+              }
+            }
           }
         }
       }

@@ -14,9 +14,18 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-		FOOTER <br>
-		Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic blanditiis laborum sequi aut nam rem quam iusto, inventore saepe officiis obcaecati in, sed odit, iure aliquam porro vitae. Unde, minus?
+		<div class="site-info max-wrap">
+			<div class="left-section reveal-left-footer">
+			<?php if(is_active_sidebar('footer-left-section')):?>
+				<?php dynamic_sidebar( 'footer-left-section' );?>
+			<?php endif; ?>
+			</div>
+			<div class="right-section reveal-right-footer">
+			<?php if(is_active_sidebar('footer-right-section')):?>
+				<?php dynamic_sidebar( 'footer-right-section' );?>
+			<?php endif; ?>
+			</div>
+			
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
